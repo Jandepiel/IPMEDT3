@@ -4,12 +4,10 @@ $(document).ready(function()
 	var box2 = document.getElementById('box2');
 	var box3 = document.getElementById('box3');
 	
-	var box11 = document.getElementById('box11');
-	var box22 = document.getElementById('box22');
-	var box33 = document.getElementById('box33');
+	
 	
 	var bank1 = document.getElementById('bank1');
-	var behang = document.getElementById('behang');
+	
 	
 	
 	box1.addEventListener('click', function()
@@ -28,25 +26,40 @@ $(document).ready(function()
 	});
 	
 	
+	var box11 = document.getElementById('box11');
+	var box22 = document.getElementById('box22');
+	var box33 = document.getElementById('box33');
 	
+	// var behang = document.getElementByClass('behang');
+	
+	var behang1 = document.getElementById('behang1');
+	var behang2 = document.getElementById('behang2');
+	var behang3 = document.getElementById('behang3');
+	var behang4 = document.getElementById('behang4');
 	
 	box11.addEventListener('click', function()
 	{
-		$(behang).attr('color','blue');
+		$(behang1).attr('src','#wall1');
+		$(behang2).attr('src','#wall1');
+		$(behang3).attr('src','#wall1');
+		$(behang4).attr('src','#wall1');
 	});
 
 	box22.addEventListener('click', function()
 	{
-		$(behang).attr('color','red');
+		$(behang1).attr('src','#wall2');
+		$(behang2).attr('src','#wall2');
+		$(behang3).attr('src','#wall2');
+		$(behang4).attr('src','#wall2');
 	});
 	
 	box33.addEventListener('click', function()
 	{
-		$(behang).attr('color','yellow');
+		$(behang1).attr('src','#wall3');
+		$(behang2).attr('src','#wall3');
+		$(behang3).attr('src','#wall3');
+		$(behang4).attr('src','#wall3');
 	});
-	
-	
-	
 	// $(box).attr('width','100');
 	
 	
