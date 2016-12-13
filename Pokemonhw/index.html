@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title> Twitter demo </title>
+		<!-- Production Version, Minified -->
+			<script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
+			<script type = "text/javascript" src="assets/js/jquery-3.1.1.min.js"> </script>
+			<script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script>
+			<script src="https://rawgit.com/bryik/aframe-bmfont-text-component/master/dist/aframe-bmfont-text-component.min.js"></script>
+			<script type = "text/javascript" src = "assets/js/main.js"></script>
+	</head>
+	
+	<body>
+		<a-scene>
+		
+			<a-assets id ="images">
+				<img id="pokedex" src="assets/img/pokedex.png">
+				<img id="klaar" src="assets/img/klaar.png">
+				
+				<img id="up" src="assets/img/up.png">
+				<img id="down" src="assets/img/down.png">
+				<img id="left" src="assets/img/left.png">
+				<img id="right" src="assets/img/right.png">
+				
+			</a-assets>
+		
+			<a-camera look-controls>
+				<a-cursor color = "white"> </a-cursor>
+			</a-camera>
+			
+				<a-sky color="black"> </a-sky>
+				
+				<a-entity position = "21 6 -48.9">
+					<a-box id="box1" src="#right" data="/pokemon/" width="4" height="4" depth="2" position = "8 0 0"> </a-box>
+					<a-box id="box2" src="#left" data="/pokemon/" width="4" height="4" depth="2" position = "0 0 0"> </a-box>
+				</a-entity>
+				
+				<!-- Pokemon naam -->
+				<a-entity scale="5 5 5" id="text" material="color: #003300" mixin="font" text="text: Bulbasaur;" position="13 31 -49"></a-entity>
+				<a-entity scale="5 5 5" id="number" material="color: #990000" mixin="font" text="text: #001;" position="13 26 -49"></a-entity>
+				
+				<!-- Pokemon type -->
+				<a-entity scale="6 6 6" id="type1" material="color: #a040a0" mixin="font" text="text: Poison;" position="15 17 -49"></a-entity>
+				<a-entity scale="6 6 6" id="type2" material="color: #78c850" mixin="font" text="text: Grass;" position="15 12 -49"></a-entity>
+				
+				<a-entity position = "-35 5 -48.9">
+					<a-circle id="box3" data="/pokemon/" src="#klaar" side="double" radius="3" height="2" position = "23 -6 0"> </a-circle>
+					
+					<a-box id="box4" src="#up" data="/pokemon/"  width="3" height="3" depth="2" position = "0 0 0"> </a-box>
+					<a-box id="box5" src="#up" data="/pokemon/"  width="3" height="3" depth="2" position = "7 0 0"> </a-box>
+					<a-box id="box6" src="#up" data="/pokemon/"  width="3" height="3" depth="2" position = "14 0 0"> </a-box>
+					<a-box id="box7" src="#down" data="/pokemon/" width="3" height="3" depth="2" position = "0 -13 0"> </a-box>
+					<a-box id="box8" src="#down" data="/pokemon/" width="3" height="3" depth="2" position = "7 -13 0"> </a-box>
+					<a-box id="box9" src="#down" data="/pokemon/" width="3" height="3" depth="2" position = "14 -13 0"> </a-box>
+				
+				</a-entity>
+				
+		
+				
+				<a-entity scale="6 6 6" id="numberinput" material="color: #000080" mixin="font" text="text: #001;" position="-35 -3 -49"></a-entity>
+				
+				<a-entity position = "13 -1 -49">
+					<a-entity scale="3 3 3" id="height" material="color: #000080" mixin="font" text="text: Height:  0.7 m;" position="0 0 0"></a-entity>
+					<a-entity scale="3 3 3" id="weight" material="color: #000080" mixin="font" text="text: Weight:  6.9 kg;" position="0 -4 0"></a-entity>
+				</a-entity>
+		
+				<a-image id="sprites" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png?1481191002529" height="21.7" width="21.7" rotation="0 0 0" position="-26 26.4 -49.8"></a-image>
+				<a-plane color="white" height="22" width="22" rotation="0 0 0" position="-26 26.4 -49.9"></a-plane>
+				
+				
+			
+				<a-image id="pokedex" src="#pokedex" height="70" width="100" rotation="0 0 0" position="0 22 -50"></a-image>
+		</a-scene>
+	
+	
+	</body>
+</html>
